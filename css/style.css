@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Redressed", cursive;
+}
+
+/* Preloader */
+body {
+  overflow: hidden;
+}
+
+body.scroll {
+  overflow-y: scroll;
+}
+
+.preloader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  z-index: 99999999;
+  transition: 0.5s 0.5s;
+}
+
+.preloader.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.spinner {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #f3f3f3;
+  border-top: 3px solid #2489ce;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: spin 1s infinite ease;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#loading-msg {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 25px;
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  font-size: 0.8em;
+}
+
+/* Hero */
+.title {
+  color: #ffffffbf;
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 3px;
+  padding: 60px 0;
+  margin: 0 5px;
+  background: linear-gradient(#0009, #0009), url(../img/forest-01.jpg) no-repeat center center / cover;
+}
+
+/* Gallery */
+img {
+  width: 100%;
+  display: block;
+}
+
+.grid {
+  display: flex;
+}
+
+.grid-item {
+  margin: 5px;
+}
+
+.grid-col--2,
+.grid-col--3 {
+  display: none;
+}
+
+@media screen and (min-width: 770px) {
+  .title {
+    font-size: 60px;
+    padding: 75px 0;
+  }
+
+  .grid-col--2 {
+    display: block;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .title {
+    font-size: 70px;
+    padding: 100px 0;
+  }
+
+  .grid-col--3 {
+    display: block;
+  }
+}
